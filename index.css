@@ -1,0 +1,109 @@
+ body{
+	margin: 0px 0px 0px 00px;
+	background-color: #ccc;
+	height: 100%;
+	padding: 0px;
+}
+
+@font-face{
+	font-family: myFont;
+	src: url('fonts/Sweet Sensations Personal Use.ttf');
+}
+
+#header{
+	left: 0px;
+	top: 0px;
+	padding: 5px;
+	position: fixed;
+	width: 100%;
+	background: #333;
+	color: #ccc;
+	background: rgba(0,0,0,0.8);
+}
+
+#subHeader{
+	float: right;
+	height: 100%;
+	margin-right: 50px;
+}
+
+.login{
+	list-style: none;
+	display: list-item;
+	float: left;
+	padding: 5px;
+}
+
+#content{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+.page{
+	height: 100vh;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#page1{
+		background-image: url("library.jpg");
+}
+
+.quote{
+	font-family: myFont;
+	font-size: 4em;
+	margin:0px;
+}
+
+#king{
+	align-self: right;
+	text-align: right;
+	font-size: 0.7em;
+}
+
+#cinema{
+	color: #343c49;
+}
+
+.pageContent{
+	left: 20%;
+	top: 30%;
+	text-align: center;
+	height: 100px;
+	background: #ccc;
+	width: 60%;
+	position: relative;
+	display: block;
+	background: rgba(0,0,0,0);
+	padding: 5px;
+}
+
+p{
+	color: white;
+}
+
+#page2{
+	background-image: url("movie.jpg");
+}
+
+#page3{
+	background-image: url("welcome.jpg");
+}
+
+#footer{
+	bottom: 0px;
+	left: 0px;
+	color: #ccc;
+	background: #333;
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+}
