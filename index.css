@@ -64,7 +64,7 @@
 }
 
 #page1{
-		background-image: url("images/library.jpg");
+	background-image: url("images/library.jpg");
 }
 
 .quote{
@@ -108,14 +108,9 @@ p{
 	background-image: url("images/welcome.jpg");
 }
 
-#footer{
-	bottom: 0px;
-	left: 0px;
-	color: #ccc;
-	background: #333;
-	width: 100%;
-	padding: 20px;
-	position: absolute;
+#signUp{
+	margin: 7% auto;
+	width: 40%;
 }
 
 #container{
@@ -132,8 +127,7 @@ p{
 }
 
 #subContainer{
-	margin: 7% auto;
-	width: 40%;
+
 	padding: 16px;
 	background-color: #fefefe;
 	border-radius: 10px;
@@ -159,5 +153,5 @@ p{
 #clearFix::after{
 	clear: both;
 	content: "";
-	display: table;
+	display: table;le;
 }

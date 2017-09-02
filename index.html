@@ -3,6 +3,8 @@
 <head>
 	<title>Wrtie a Review!</title>
 	<link href="index.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 </head>
 <body>
 
@@ -28,44 +30,72 @@
 		</div>
 		<div class="page" id="page3">
 			<div class="pageContent">
-				<input type="button" name="Sign Up" onclick="document.getElementById('container').style.display='block'" value="SignUp">
+				<input type="button" name="Sign Up" onclick="$('#container').fadeIn()" value="SignUp">
 			</div>
 		
-		<!--Modal Sign Up Form-->
-		
-		<div id="container" class="modal">
-			<form class="modal">
-				<div id="subContainer">
-					<span><b>Name</b></span>
-					<input class="formElement" type="text" name="Name" placeholder="Enter Name" required><br>
-					<span><b>Email</b></span>
-					<input class="formElement" type="email" name="Email" placeholder="Enter Email" required><br>
-					<span><b>Password</b></span>
-					<input class="formElement" type="password" name="pwd" placeholder="Enter Password" required><br>
-					<span><b>Re-enter Password</b></span>
-					<input class="formElement" type="password" name="repwd" placeholder="Enter Password" required><br>
-					<span><b>Contact No.</b></span>
-					<input class="formElement" type="text" name="Number" placeholder="Enter Phone Number" required><br>
-					<span>By creating an account you you agree to <a href="#">Terms &amp; Conditions</a></span><br><br>
-					<div id="clearFix">
-						<input class="btn" type="Button" name="cancelBtn" value="Cancel" onclick="document.getElementById('container').style.display='none'">
-						<input class="btn" type="Button" name="submitBtn" value="Submit">
+			<!--Modal Sign Up Form-->
+			
+			<div id="container">
+				<form id="signUp">
+					<div id="subContainer">
+						<span><b>Name</b></span>
+						<input class="formElement" type="text" name="Name" placeholder="Enter Name" required><br>
+						<span><b>Email</b></span>
+						<input class="formElement" type="email" name="Email" placeholder="Enter Email" required><br>
+						<span><b>Password</b></span>
+						<input class="formElement" type="password" name="pwd" placeholder="Enter Password" required><br>
+						<span><b>Re-enter Password</b></span>
+						<input class="formElement" type="password" name="repwd" placeholder="Enter Password" required><br>
+						<span><b>Contact No.</b></span>
+						<input class="formElement" type="text" name="Number" placeholder="Enter Phone Number" required><br>
+						<span>By creating an account you you agree to <a href="#">Terms &amp; Conditions</a></span><br><br>
+						<div id="clearFix">
+							<input class="btn" type="Button" name="cancelBtn" value="Cancel" onclick="$('#container').fadeOut()">
+							<input class="btn" type="Button" name="submitBtn" value="Submit">
+						</div>
 					</div>
-				</div>
-			</form>
-			<script>
-				var modal= document.getElementById('container');
+				</form>
+				<script>
+					var modal= document.getElementById('container');
 
-				modal.onclick = function(event){
-					if (event.target == modal) {
-						modal.style.display = "none";
+					modal.onclick = function(event){
+						if (event.target == modal) {
+							$('#container').fadeOut();
+						}
 					}
-				}
-			</script>
-		</div>
+				</script>
+				<script>
+					var keyCodeESC = 27;
+					$(document).keyup(function(e) { 
+					    if (e.keyCode == keyCodeESC) {
+					    	if ($("#container").css("display")=="block") {
+				        		$("#container").fadeOut();
+				        	}
+				    	}
+					});
+
+
+					$(window).scroll(function scroll(){
+
+						var headerpos = $('#header').offset().top;
 
 
 
+						var bottom = headerpos + $('#header').outerHeight() - $(window).scrollTop();
+
+						var pagepos = $('#page3').offset().top - $(window).scrollTop();
+						var diff = pagepos - bottom;
+						var topnew = pagepos - $('#header').outerHeight();
+						var top = topnew + "px"
+						if (diff < 0) {
+							$('#header').css("top",top);
+						}
+						else{
+							$('#header').css("top","0px");
+						}
+					});
+				</script>	
+			</div>
 		</div>
 	</div>
 
