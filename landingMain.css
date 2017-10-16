@@ -1,0 +1,94 @@
+ body{
+	margin: 0px 0px 0px 0px;
+	height: 100%;
+	padding: 0px;
+}
+
+a, a:active, a:link{
+	text-decoration: none;
+}
+
+
+#header{
+	left: 0px;
+	top: 0px;
+	padding: 15px;
+	background-color: #333;
+	position: fixed;
+	width: 100%;
+}
+
+#containerLeft{
+	height: 100%;
+	display: inline-block;
+	width: 70%;
+}
+
+.head{
+	display: inline-block;
+}
+
+#logo{
+	height: 100%;
+	align-items: center;
+	box-sizing: content-box;
+	margin-left: 100px;
+	display: block;
+	background-image: url(images/logo.png);
+	width: 129px;
+	height: 37px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+#discover{
+	border-left: 1px solid #aba9a9;
+	display: block;
+	font-size: 24px;
+	padding: 5px 15px;
+	color: #b6b6b6;
+	margin-left: 20px;
+}
+
+.headerRight{
+	float: right;
+}
+
+input[name="searchBar"]{
+	height: 37px;
+	width: 500px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	border-radius: 2px;
+	border:	1px solid #bbc0c4;
+}
+
+#containerRight{
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+}
+
+ul{
+	list-style: none;
+	margin:0px;
+}
+
+#containerRight>ul>li{
+	font-size: 24px;
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+#containerRight>ul>li>a{
+	color: #b6b6b6;
+}
+
+#content{
+	margin-top: 78px;
+}
+
+#sideNav{
+	padding: 10px;
+}
