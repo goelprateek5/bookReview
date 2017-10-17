@@ -1,2 +1,2 @@
 # bookReview
-Website for movie and book review
+Website for book review
