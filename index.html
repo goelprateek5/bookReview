@@ -77,21 +77,18 @@
 					$(window).scroll(function scroll(){
 
 						var headerpos = $('#header').offset().top;
-
-
-
-						var bottom = headerpos + $('#header').outerHeight() - $(window).scrollTop();
-
 						var pagepos = $('#page3').offset().top - $(window).scrollTop();
-						var diff = pagepos - bottom;
 						var topnew = pagepos - $('#header').outerHeight();
 						var top = topnew + "px"
-						if (diff < 0) {
+
+						if (pagepos < $('#header').outerHeight()) {
 							$('#header').css("top",top);
 						}
 						else{
 							$('#header').css("top","0px");
 						}
+
+					
 					});
 				</script>	
 			</div>

@@ -3,13 +3,14 @@
 <head>
   <title>Welcome</title>
   <link rel="stylesheet" type="text/css" href="landingMain.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="header">
   <div id="containerLeft">
     <div style="display: block;">
       <div class="head" >
-        <svg id="svg" width="37px" height="37px" viewBox="0 0 48 48" style="display: block; fill: #b6b6b6;">
+        <svg id="svg" width="37px" height="37px" viewBox="0 0 48 48" style="display: block; fill: #b6b6b6;cursor: pointer;">
           <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
         </svg>
       </div>
@@ -34,13 +35,36 @@
 
 <div id="content">
   <div id="sideNav">
-    <ul>
-      <li>Home</li>
-      <li>Discover</li>
-      <li>Categories</li>
-    </ul>
+    <div id="sideNavContent">
+      <ul>
+        <li class="menuItems">Home</li>
+        <li class="menuItems">Discover</li>
+        <li class="menuItems">Categories</li>
+        <li class="menuItems">Lorem Ipsum1</li>
+        <li class="menuItems">Lorem Ipsum2</li>
+        <li class="menuItems">Lorem Ipsum3</li>
+      </ul>
+      <hr class="horSeparator">
+    </div>
+    <div class="verSeparator"></div>
+  </div>
+  <div id="mainContent">
+
   </div>
 </div>
+
+
+<script>
+  $('#svg').click(function(){
+    $('#sideNav').toggle(function(){
+      $('sideNav').animate({width:'0px'},5500);
+    },
+    function () {
+      $('sideNav').animate({width:'20%'},5500);
+    });
+    });
+
+</script>
 
 </body>
 </html>

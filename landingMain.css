@@ -1,4 +1,4 @@
- body{
+html, body{
 	margin: 0px 0px 0px 0px;
 	height: 100%;
 	padding: 0px;
@@ -87,10 +87,53 @@ ul{
 
 #content{
 	margin-top: 78px;
+	height: 100%;
 }
 
 #sideNav{
-	padding: 10px;
-	font-size: 24px;
-	color: rgba(0,0,0,.87);
+	width: 20%;
+	position: fixed;
+	padding-top: 30px;
+	height: 100%;
+	transition: display 5s;
 }
+
+#sideNav>ul{
+	display: inline-block;
+}
+
+#sideNavContent{
+	display: inline-block;
+	width: 98%;
+}
+
+.menuItems{
+	font-size: 18px;
+	color: rgba(0,0,0,.87);
+	padding: 10px 10px 10px 10px;
+}
+
+.horSeparator{
+	margin-left: 10%;
+	width: 70%;
+	color: rgba(0,0,0,0.87);
+	background-color: rgba(0,0,0,0.87);
+	display: block;
+}
+
+.verSeparator{
+	width: 1px;
+	background-color: rgba(0,0,0,0.87);
+	height: 80%;
+	margin-top: 4%;
+	display: inline-block;
+	float: right;
+}
+
+#mainContent{
+	width: 80%;
+	float: right;
+	display: inline-block;
+	height: 100%;
+}
+
